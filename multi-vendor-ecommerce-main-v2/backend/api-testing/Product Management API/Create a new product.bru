@@ -1,0 +1,24 @@
+meta {
+  name: Create a new product
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/products
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJTRUxMRVIiLCJpYXQiOjE3MzM2MzQ3OTgsImV4cCI6MTczMzcyMTE5OH0.pwC5n9mdo22dh3drckdfIvxftqRT4RCqOyH1eM6QGCg
+}
+
+body:multipart-form {
+  images: @file(/home/muktadir/Pictures/Screenshot_২০২৪১২০৫_১২২৪২৯.png)
+  name: Blue Jean
+  price: 20
+  stock: 10
+  shopId: 2
+  categoryId: 1
+}

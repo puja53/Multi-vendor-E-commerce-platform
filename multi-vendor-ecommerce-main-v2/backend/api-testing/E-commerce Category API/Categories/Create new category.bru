@@ -1,0 +1,24 @@
+meta {
+  name: Create new category
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/categories
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJBRE1JTiIsImlhdCI6MTczMzY3OTQwMiwiZXhwIjoxNzMzNzY1ODAyfQ.LiVm4JPpm6qaFsDsBNej2-oflEK_8bCb0Da4NRW3jNI
+}
+
+body:json {
+  {
+    "name": "Cat 1",
+    "description": "",
+    "image": "",
+    "parentId": ""
+  }
+}
